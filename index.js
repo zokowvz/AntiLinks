@@ -2,12 +2,12 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
-  console.log("je suis co gro");
+  console.log("[+] connecté à ${client.user.username} ");
 });
 
 client.on("message", (message) => {
   if (message.content.includes("https://")) {
-    console.log("deleted " + message.content + " from " + message.author)
+    console.log("deleted" + message.content + " from " + message.author)
     message.delete(1);
     message.channel.sendMessage("pas de lien ici, t sah la ?, " + message.author)
   }
@@ -49,4 +49,4 @@ client.on("guildCreate", guild => {
   console.log("j'viens de join un serv ptdr, " + guild.name)
 });
 
-client.login("met ton token ici assisté");
+client.login("mets ton token ici assisté");
