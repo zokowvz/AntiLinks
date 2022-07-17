@@ -21,6 +21,9 @@ client.on('message', (message) => {
   let command = message.content
 
   if(command === prefix + "addwl"){
+   if(!args[0]){
+   message.reply("oui oui d'accord, je dois WhiteList le vent, pourquoi pas")
+   }
      if(message.author !== config.owner){
        message.reply("``Tu dois être Propriétaire du bot pour executer cette commande !``")
      }
